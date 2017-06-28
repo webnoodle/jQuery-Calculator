@@ -31,7 +31,7 @@ $(document).ready(function(){
   function update(){
     totalString = inputs.join("");
     $("#steps").html(totalString);
-  cosole.log(inputs);
+  console.log(inputs);
   }
   
   function getTotal(){
@@ -39,19 +39,19 @@ $(document).ready(function(){
     $("#steps").html(eval(totalString));
   }
   $("a").on("click", function(){
-    if(this.id=="deleteAll"){
+    if(this.id==="deleteAll"){
       inputs=[""];
       update();
     }
     else if(this.id==="backOne"){
-      input.pop();
+      inputs.pop();
       update();
     }
     else if(this.id==="total"){
       getTotal();
     }
     else{
-      if(inputs[inputs.lenght-1].indexOf("+", "-", "/", "*", ".")===-1){
+      if(inputs[inputs.length-1].indexOf("+", "-", "/", "*", ".")===-1){
          getValue(this.id);
          }
          else{
